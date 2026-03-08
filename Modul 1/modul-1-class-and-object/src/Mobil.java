@@ -3,6 +3,7 @@ public class Mobil {
     private String warna;
     private String merk;
     private int kecepatan;
+    private double jarakTempuh;
     public void setNopol(String n) {
         nopol = n;
     }
