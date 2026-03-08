@@ -1,6 +1,7 @@
 public class Penerbit {
     String nama;
     String kota = "Malang";
+
     Penerbit() {
         this.nama = "Springer";
     }
@@ -11,6 +12,7 @@ public class Penerbit {
         this.nama = nama;
         this.kota = kota;
     }
+    
     public void display() {
         System.out.println("Penerbit " + nama);
         System.out.println("di Kota " + kota);

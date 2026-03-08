@@ -1,4 +1,5 @@
 public class PenerbitApp {
+
     public static void main(String[] args) {
         Penerbit penerbit = new Penerbit();
         penerbit.display();
@@ -7,4 +8,5 @@ public class PenerbitApp {
         Penerbit gm = new Penerbit("Gramedia", "Jakarta");
         gm.display();
     }
+
 }
