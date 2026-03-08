@@ -16,6 +16,10 @@ public class Mobil {
     public void setKecepatan(int k) {
         kecepatan = k;
     }
+    public double hitungJarak(double waktu) {
+        jarakTempuh = kecepatan * waktu;
+        return jarakTempuh;
+    }
     public void display() {
         System.out.println("Mobil bermerk " + merk);
         System.out.println("bernomor polisi " + nopol);
