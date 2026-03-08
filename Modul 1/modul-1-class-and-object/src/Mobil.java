@@ -20,6 +20,10 @@ public class Mobil {
         jarakTempuh = kecepatan * waktu;
         return jarakTempuh;
     }
+    public void tampilkanKecepatanMS() {
+        double kecepatanMS = kecepatan * (1000.0 / 3600.0);
+        System.out.println("Kecepatan dalam m/s: " + kecepatanMS);
+    }
     public void display() {
         System.out.println("Mobil bermerk " + merk);
         System.out.println("bernomor polisi " + nopol);
