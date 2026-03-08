@@ -1,5 +1,13 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan Merk: ");
+        String inputMerk = input.nextLine();
+        System.out.print("Masukkan Nopol: ");
+        String inputNopol = input.nextLine();
+
 //instansiasi objek bernama m1
         Mobil m1 = new Mobil();
         m1.setKecepatan(50);
