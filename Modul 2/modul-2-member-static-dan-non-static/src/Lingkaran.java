@@ -9,4 +9,8 @@ public class Lingkaran {
     public static float luas() {
         return Lingkaran.PI * r * r;
     }
+
+    public static float keliling(float r) {
+        return 2 * PI * r;
+    }
 }
