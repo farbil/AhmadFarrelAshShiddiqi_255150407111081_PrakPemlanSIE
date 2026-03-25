@@ -6,7 +6,7 @@ public class Lingkaran {
         this.r = r;
     }
 
-    static public float luas() {
+    public static float luas() {
         return Lingkaran.PI * r * r;
     }
 }
