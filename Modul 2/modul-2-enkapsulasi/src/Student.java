@@ -1,6 +1,6 @@
 public class Student {
     private String nama;
-    public int skor;
+    private int skor;
 
     public Student(String nama) {
         this.nama = nama;
