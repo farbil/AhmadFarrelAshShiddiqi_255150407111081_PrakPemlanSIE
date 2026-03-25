@@ -13,4 +13,8 @@ public class Student {
     public int getSkor() {
         return this.skor;
     }
+
+    public String getNama() {
+        return this.nama;
+    }
 }
