@@ -1,8 +1,8 @@
 public class Sedan extends Car {
     public int numDoors = 3;
-    Sedan() {
-        System.out.println("Sedan is created");
-    }
+//    Sedan() {
+//        System.out.println("Sedan is created");
+//    }
     public void trunk() {
         System.out.println("Sedan is opening trunk");
     }
