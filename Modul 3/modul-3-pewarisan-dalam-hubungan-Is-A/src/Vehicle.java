@@ -2,7 +2,7 @@ public class Vehicle {
     Vehicle() {
         System.out.println("Vehicle is created");
     }
-    public void drive() {
+    protected void drive() {
         System.out.println("Vehicle is driving");
     }
     public void stop() {
