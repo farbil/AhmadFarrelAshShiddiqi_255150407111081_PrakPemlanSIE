@@ -7,6 +7,7 @@ public class Sedan extends Car {
         System.out.println("Sedan is opening trunk");
     }
     public void honk() {
+        super.honk();
         System.out.println("Sedan is honking");
     }
     public void getNumWheels() {
