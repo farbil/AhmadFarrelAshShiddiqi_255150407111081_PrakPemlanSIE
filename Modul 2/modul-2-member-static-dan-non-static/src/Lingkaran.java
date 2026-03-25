@@ -1,6 +1,6 @@
 public class Lingkaran {
     public static float PI = 3.14f;
-    public float r;
+    static public float r;
 
     public Lingkaran(float r) {
         this.r = r;
