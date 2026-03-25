@@ -8,5 +8,11 @@ public class GeometriApp {
 
         System.out.println("Luas Lingkaran Kecil: " + lK);
         System.out.println("Luas Lingkaran Besar: " + lB);
+
+        float kK = Lingkaran.keliling(lingKecil.r);
+        float kB = Lingkaran.keliling(lingBesar.r);
+
+        System.out.println("Keliling Lingkaran Kecil: " + kK);
+        System.out.println("Keliling Lingkaran Besar: " + kB);
     }
 }
