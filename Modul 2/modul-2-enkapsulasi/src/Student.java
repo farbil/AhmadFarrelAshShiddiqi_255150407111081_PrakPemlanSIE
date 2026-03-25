@@ -6,7 +6,7 @@ public class Student {
         this.nama = nama;
     }
 
-    void setNama(String nama) {
+    private void setNama(String nama) {
         this.nama = nama;
     }
 
