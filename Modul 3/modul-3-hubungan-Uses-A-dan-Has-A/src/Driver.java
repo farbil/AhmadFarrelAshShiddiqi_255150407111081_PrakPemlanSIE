@@ -3,11 +3,13 @@ public class Driver {
 
     public Driver() {
         System.out.println("Driver is created.");
-        this.mobil = new Car();
     }
 
     public void driving() {
         System.out.println("Driver is driving.");
+
+        this.mobil = new Car();
+
         System.out.println("Using a car that has " + mobil.numWheel + " wheels.");
     }
 }
