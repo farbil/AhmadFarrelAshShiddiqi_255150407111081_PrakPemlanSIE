@@ -1,5 +1,5 @@
 public class Car extends Vehicle {
-    private int numWheel = 4;
+    public int numWheel = 4;
     Car() {
         System.out.println("Car is created");
     }
