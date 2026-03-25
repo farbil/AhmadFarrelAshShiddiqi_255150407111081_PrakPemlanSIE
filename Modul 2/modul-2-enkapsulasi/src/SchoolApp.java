@@ -3,12 +3,12 @@ public class SchoolApp {
         Student miki = new Student("Miki");
         Student mini = new Student("Mini");
 
-        System.out.println("Grade " + miki.getNama() + " " + miki.skor);
-        System.out.println("Grade " + mini.getNama() + " " + mini.skor);
+        System.out.println("Grade " + miki.getNama() + " " + miki.getSkor());
+        System.out.println("Grade " + mini.getNama() + " " + mini.getSkor());
 
         mini = new Student("Mono");
 
-        System.out.println("Grade " + miki.getNama() + " " + miki.skor);
-        System.out.println("Grade " + mini.getNama() + " " + mini.skor);
+        System.out.println("Grade " + miki.getNama() + " " + miki.getSkor());
+        System.out.println("Grade " + mini.getNama() + " " + mini.getSkor());
     }
 }
