@@ -17,4 +17,12 @@ public class Student {
     public String getNama() {
         return this.nama;
     }
+
+    public static void setNama(Student std, String nama) {
+        std.nama = nama;
+    }
+
+    public static void setSkor(Student std, int skor) {
+        std.skor = skor;
+    }
 }

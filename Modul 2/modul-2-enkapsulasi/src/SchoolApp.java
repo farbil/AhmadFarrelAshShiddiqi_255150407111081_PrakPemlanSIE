@@ -6,7 +6,8 @@ public class SchoolApp {
         System.out.println("Grade " + miki.getNama() + " " + miki.getSkor());
         System.out.println("Grade " + mini.getNama() + " " + mini.getSkor());
 
-        mini = new Student("Mono");
+        Student.setNama(mini, "Mono"); // soal 4c ubah mini menjadi mono
+        Student.setNama(miki, "Kiki"); // soal 5b
 
         System.out.println("Grade " + miki.getNama() + " " + miki.getSkor());
         System.out.println("Grade " + mini.getNama() + " " + mini.getSkor());
