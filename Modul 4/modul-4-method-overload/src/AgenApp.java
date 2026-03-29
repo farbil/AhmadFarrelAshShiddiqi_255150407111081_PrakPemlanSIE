@@ -11,5 +11,9 @@ public class AgenApp {
         Tiket t3 = new Tiket();
         t3.pesan("Cici", "Surabaya", 200, 100000);
         t3.tampil();
+
+        Tiket t4 = new Tiket();
+        t4.pesan("Dono", 60);
+        t4.tampil();
     }
 }
