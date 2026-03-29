@@ -6,6 +6,11 @@ public class Tiket {
 
     public void pesan() {}
 
+    public void pesan(String n, int j) {
+        this.namaPenumpang = n;
+        this.jarakTempuh = j;
+    }
+
     public void pesan(String n, String t) {
         this.namaPenumpang = n;
         this.tujuan = t;
