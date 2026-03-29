@@ -10,6 +10,11 @@ public class TiketBus extends Tiket {
             System.out.println("Maaf " + n + ", tiket tidak dapat dipesan.");
         }
     }
+
+    public void pesan(String nama) {
+        this.namaPenumpang = nama;
+    }
+
     @Override
     public void tampil() {
         if (!this.tujuan.equals("Makassar")) {

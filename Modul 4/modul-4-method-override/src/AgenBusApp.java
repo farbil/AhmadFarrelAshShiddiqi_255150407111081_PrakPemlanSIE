@@ -12,6 +12,10 @@ public class AgenBusApp {
         t3.pesan("Kasino", "Bandung", 650, 450000);
         t3.tampil();
 
+        TiketBus t4 = new TiketBus();
+        t4.pesan("Sule");
+        t4.tampil();
+
         t1.pesan("Indro", "Makassar");
         t1.tampil();
         t2.pesan("Dono", "Makassar");
