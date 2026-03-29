@@ -18,7 +18,8 @@ public class AmongUsGame {
 
         jacky.kill(cindy);
 
-        jacky = new Crew(jacky.name);
+//        jacky = new Crew(jacky.name);
+        jacky = new NonPlayableChar(jacky);
 
         if (david instanceof Crew crew)
             crew.callMeeting();
