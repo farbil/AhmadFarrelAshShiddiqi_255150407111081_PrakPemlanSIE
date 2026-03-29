@@ -23,11 +23,6 @@ public class Tiket {
         this.jarakTempuh = j; this.hargaTiket = h;
     }
 
-    public void pesan(String t, String n) {
-        this.tujuan = t;
-        this.namaPenumpang = n;
-    }
-
     public void tampil() {
         System.out.println("Nama Penumpang: " + this.namaPenumpang);
         System.out.println("Tujuan: " + this.tujuan);
