@@ -1,6 +1,7 @@
 public class Crew implements ICrew {
 
     private String name;
+    private boolean isAlive = true;
 
     public Crew(String name) {
         this.name = name;
@@ -21,10 +22,18 @@ public class Crew implements ICrew {
         System.out.println(this.name + " was ejected.");
     }
 
+    public void setAlive(boolean status) {
+        this.isAlive = status;
+    }
+
     public void callMeeting() {
-        System.out.print(this.name + " found a corpse ");
-        System.out.print("and calls a meeting. ");
-        System.out.println("Let's find the impostor!");
+        if (this.isAlive) {
+            System.out.print(this.name + " found a corpse ");
+            System.out.print("and calls a meeting. ");
+            System.out.println("Let's find the impostor!");
+        } else {
+            System.out.println(this.name + " is dead and cannot call a meeting.");
+        }
     }
 
 }

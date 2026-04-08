@@ -9,6 +9,9 @@ public class Impostor implements IImpostor, ICrew {
     @Override
     public void kill(ICrew crew) {
         System.out.println(crew.getName() + " has been killed!");
+        if (crew instanceof Crew) {
+            ((Crew) crew).setAlive(false);
+        }
     }
 
     @Override

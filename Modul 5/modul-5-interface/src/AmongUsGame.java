@@ -23,6 +23,8 @@ public class AmongUsGame {
         AmongUsGame.check(david);
         AmongUsGame.check(jacky);
 
+        cindy.callMeeting();
+
     }
 
     public static void check(ICrew crew) {
@@ -34,5 +36,5 @@ public class AmongUsGame {
     public static boolean isImpostor(ICrew crew) {
         return (crew instanceof Impostor);
     }
-    
+
 }
