@@ -16,14 +16,15 @@ public class Crew implements ICrew {
         return this.name;
     }
 
+    @Override
+    public void kick() {
+        System.out.println(this.name + " was ejected.");
+    }
+
     public void callMeeting() {
         System.out.print(this.name + " found a corpse ");
         System.out.print("and calls a meeting. ");
         System.out.println("Let's find the impostor!");
-    }
-
-    @Override public void kick() {
-        System.out.println(this.name + " was ejected.");
     }
 
 }
