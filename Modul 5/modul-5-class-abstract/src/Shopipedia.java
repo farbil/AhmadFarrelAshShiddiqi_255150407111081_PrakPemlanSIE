@@ -21,5 +21,13 @@ public class Shopipedia {
         dono.deposit(1000);
         dono.pay(7000);
 
+        Kris krisCard = new Kris();
+        Customer kasino = new Customer(krisCard);
+        kasino.deposit(10000);
+        kasino.pay(2000);
+        kasino.pay(3000);
+        kasino.deposit(1000);
+        kasino.pay(7000);
+
     }
 }
