@@ -22,4 +22,8 @@ public class Crew implements ICrew {
         System.out.println("Let's find the impostor!");
     }
 
+    @Override public void kick() {
+        System.out.println(this.name + " was ejected.");
+    }
+
 }

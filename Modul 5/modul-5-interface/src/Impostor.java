@@ -21,4 +21,8 @@ public class Impostor implements IImpostor, ICrew {
         return this.name;
     }
 
+    @Override public void kick() {
+        System.out.println(this.name + " was ejected.");
+    }
+
 }
