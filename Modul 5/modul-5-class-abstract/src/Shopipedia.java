@@ -21,13 +21,15 @@ public class Shopipedia {
         dono.deposit(1000);
         dono.pay(7000);
 
+        System.out.println("------------------");
+
         Kris krisCard = new Kris();
-        Customer kasino = new Customer(krisCard);
-        kasino.deposit(10000);
-        kasino.pay(2000);
-        kasino.pay(3000);
-        kasino.deposit(1000);
-        kasino.pay(7000);
+        Customer farrel = new Customer(krisCard);
+        farrel.deposit(10000);
+        farrel.pay(2000);
+        farrel.pay(3000);
+        farrel.deposit(1000);
+        farrel.pay(7000);
 
     }
 }
