@@ -34,5 +34,5 @@ public class AmongUsGame {
     public static boolean isImpostor(ICrew crew) {
         return (crew instanceof Impostor);
     }
-
+    
 }
