@@ -20,5 +20,5 @@ public class Impostor implements IImpostor, ICrew {
     public String getName() {
         return this.name;
     }
-    
+
 }
