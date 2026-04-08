@@ -31,5 +31,39 @@ public class Shopipedia {
         farrel.deposit(1000);
         farrel.pay(7000);
 
+        System.out.println("------------------");
+
+        Emoney krisSubclass = new Emoney() {
+            {
+                this.name = "Kris";
+            }
+
+            @Override
+            public void topUp(double amount) {
+                System.out.println("Top up: " + amount);
+                this.balance += (amount + (0.05 * amount));
+                this.balance();
+            }
+
+            @Override
+            public void pay(double amount) {
+                double amountToPay = amount - (0.03 * amount);
+                if (this.balance > amountToPay) {
+                    this.balance -= amountToPay;
+                    System.out.printf("Pay %.1f using %s\n", amount, this.name);
+                } else {
+                    System.out.println("Not enough balance.");
+                }
+                this.balance();
+            }
+        };
+        Customer indro = new Customer(krisSubclass);
+
+        indro.deposit(10000);
+        indro.pay(2000);
+        indro.pay(3000);
+        indro.deposit(1000);
+        indro.pay(7000);
+
     }
 }
