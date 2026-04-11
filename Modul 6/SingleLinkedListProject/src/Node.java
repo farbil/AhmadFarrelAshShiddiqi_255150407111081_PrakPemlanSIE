@@ -8,6 +8,6 @@ public class Node {
 
         System.out.println("node    : " + node);
         System.out.println("data    : " + node.data);
-        System.out.println("pointer    : " + node.next);
+        System.out.println("pointer : " + node.next);
     }
 }
