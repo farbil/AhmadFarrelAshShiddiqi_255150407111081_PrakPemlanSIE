@@ -1,5 +1,24 @@
 public class SingleLinkedList {
 
+    public static void main(String[] args) {
+        SingleLinkedList list = new SingleLinkedList();
+
+        System.out.println("Head: " + list.head);
+        System.out.println("Tail: " + list.tail);
+
+        list.addFirst(new Node());
+        System.out.println("Head: " + list.head);
+        System.out.println("Tail: " + list.tail);
+
+        list.addFirst(new Node());
+        System.out.println("Head: " + list.head);
+        System.out.println("Tail: " + list.tail);
+
+        list.addLast(new Node());
+        System.out.println("Head: " + list.head);
+        System.out.println("Tail: " + list.tail);
+    }
+
     Node head, tail;
     int size = 0;
 
