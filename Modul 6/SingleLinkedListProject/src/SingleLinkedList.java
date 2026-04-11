@@ -7,18 +7,17 @@ public class SingleLinkedList {
         System.out.println("Head: " + list.head);
         System.out.println("Tail: " + list.tail);
 
-        list.addFirst(new Node());
-        System.out.println("Head: " + list.head);
-        System.out.println("Tail: " + list.tail);
+        list.addFirst(new Node("A"));
+        System.out.println("Head: " + list.head.data);
+        System.out.println("Tail: " + list.tail.data);
 
-        list.addFirst(new Node());
-        System.out.println("Head: " + list.head);
-        System.out.println("Tail: " + list.tail);
+        list.addFirst(new Node("B"));
+        System.out.println("Head: " + list.head.data);
+        System.out.println("Tail: " + list.tail.data);
 
-        list.addLast(new Node());
-        System.out.println("Head: " + list.head);
-        System.out.println("Tail: " + list.tail);
-        
+        list.addLast(new Node("C"));
+        System.out.println("Head: " + list.head.data);
+        System.out.println("Tail: " + list.tail.data);
     }
 
     Node head, tail;
