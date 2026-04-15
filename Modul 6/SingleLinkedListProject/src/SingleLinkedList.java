@@ -39,6 +39,16 @@ public class SingleLinkedList {
         return null;
     }
 
+    // b. Mencari node di posisi ke-n (index mulai dari 0)
+    Node findNodeByIndex(int index) {
+        if (index < 0 || index >= size) return null;
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current;
+    }
+
     static void cetakList(SingleLinkedList list) {
         Node current = list.head;
         while(current != null) {
@@ -56,9 +66,13 @@ public class SingleLinkedList {
         list.addLast(new Node("D"));
         cetakList(list);
 
-        System.out.println("\na. Mencari node 'C'");
+        System.out.println("a. Mencari node 'C'");
         Node found = list.findNode("C");
         System.out.println("Hasil pencarian data: " + (found != null ? found.data : null));
+
+        System.out.println("b. Mencari node di index 2");
+        Node foundIndex = list.findNodeByIndex(2);
+        System.out.println("Hasil pencarian index 2: " + (foundIndex != null ? foundIndex.data : null));
 
     }
 
