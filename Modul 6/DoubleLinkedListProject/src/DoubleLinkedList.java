@@ -60,6 +60,24 @@ public class DoubleLinkedList {
         return current;
     }
 
+    // 8c. Menghapus node di posisi ke-n
+    void removeByIndex(int index) {
+        if (index < 0 || index >= size || isEmpty()) return;
+        if (index == 0) {
+            head = head.next;
+            if (head != null) head.prev = null;
+            else tail = null;
+        } else if (index == size - 1) {
+            tail = tail.prev;
+            tail.next = null;
+        } else {
+            Node target = findNodeByIndex(index);
+            target.prev.next = target.next;
+            target.next.prev = target.prev;
+        }
+        size--;
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -94,6 +112,10 @@ public class DoubleLinkedList {
 
         System.out.println("\n7. Menampilkan urutan elemen dari belakang");
         list.printFromBack();
+
+        System.out.println("\n8c. Menghapus index 1");
+        list.removeByIndex(1);
+        list.print();
 
         System.out.println("\n8a & 8b. Hasil");
         System.out.println("Cari 'C': " + (list.findNode("C") != null ? "Ditemukan" : "Tidak"));
