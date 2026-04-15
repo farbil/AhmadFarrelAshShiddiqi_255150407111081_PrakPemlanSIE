@@ -3,26 +3,6 @@ public class SingleLinkedList {
     Node head, tail;
     int size = 0;
 
-    public static void main(String[] args) {
-
-        SingleLinkedList list = new SingleLinkedList();
-
-        System.out.println("Head: " + list.head);
-        System.out.println("Tail: " + list.tail);
-
-        list.addFirst(new Node("A"));
-        System.out.println("Head: " + list.head.data);
-        System.out.println("Tail: " + list.tail.data);
-
-        list.addFirst(new Node("B"));
-        System.out.println("Head: " + list.head.data);
-        System.out.println("Tail: " + list.tail.data);
-
-        list.addLast(new Node("C"));
-        System.out.println("Head: " + list.head.data);
-        System.out.println("Tail: " + list.tail.data);
-    }
-
     void init() { head = null; }
     boolean isEmpty() { return size == 0; }
     int size() { return size; }
@@ -47,6 +27,26 @@ public class SingleLinkedList {
             tail = data;
         }
         size++;
+    }
+
+    public static void main(String[] args) {
+
+        SingleLinkedList list = new SingleLinkedList();
+
+        System.out.println("Head: " + list.head);
+        System.out.println("Tail: " + list.tail);
+
+        list.addFirst(new Node("A"));
+        System.out.println("Head: " + list.head.data);
+        System.out.println("Tail: " + list.tail.data);
+
+        list.addFirst(new Node("B"));
+        System.out.println("Head: " + list.head.data);
+        System.out.println("Tail: " + list.tail.data);
+
+        list.addLast(new Node("C"));
+        System.out.println("Head: " + list.head.data);
+        System.out.println("Tail: " + list.tail.data);
     }
 
 }
