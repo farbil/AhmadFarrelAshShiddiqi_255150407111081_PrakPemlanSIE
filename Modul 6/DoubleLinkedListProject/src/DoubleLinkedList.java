@@ -97,6 +97,21 @@ public class DoubleLinkedList {
         size--;
     }
 
+    // 8e. Menambah node di posisi ke-n
+    void insertAt(int index, Node data) {
+        if (index < 0 || index > size) return;
+        if (index == 0) addFirst(data);
+        else if (index == size) addLast(data);
+        else {
+            Node current = findNodeByIndex(index);
+            data.prev = current.prev;
+            data.next = current;
+            current.prev.next = data;
+            current.prev = data;
+            size++;
+        }
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -131,6 +146,10 @@ public class DoubleLinkedList {
 
         System.out.println("\n7. Menampilkan urutan elemen dari belakang");
         list.printFromBack();
+
+        System.out.println("\n8e. Menambahkan 'X' di index 1 ===");
+        list.insertAt(1, new Node("X"));
+        list.print();
 
         System.out.println("\n8c. Menghapus index 1");
         list.removeByIndex(1);
