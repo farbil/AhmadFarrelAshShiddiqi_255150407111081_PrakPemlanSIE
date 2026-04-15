@@ -30,6 +30,16 @@ public class DoubleLinkedList {
         size++;
     }
 
+    // 7. Menampilkan urutan elemen dari belakang
+    void printFromBack() {
+        Node current = tail;
+        while (current != null) {
+            System.out.print(current.data + "->");
+            current = current.prev;
+        }
+        System.out.println("null");
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -61,6 +71,9 @@ public class DoubleLinkedList {
 
         System.out.println("Next of B: " + nodeB.next.data);
         System.out.println("Prev of B: " + nodeB.prev.data);
+
+        System.out.println("\n7. Menampilkan urutan elemen dari belakang");
+        list.printFromBack();
     }
 
 }
