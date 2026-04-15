@@ -112,6 +112,22 @@ public class DoubleLinkedList {
         }
     }
 
+    // 8f. Menambah node setelah node dengan nilai tertentu
+    void insertAfter(Object key, Node data) {
+        Node current = findNode(key);
+        if (current != null) {
+            if (current == tail) {
+                addLast(data);
+            } else {
+                data.next = current.next;
+                data.prev = current;
+                current.next.prev = data;
+                current.next = data;
+                size++;
+            }
+        }
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -147,7 +163,11 @@ public class DoubleLinkedList {
         System.out.println("\n7. Menampilkan urutan elemen dari belakang");
         list.printFromBack();
 
-        System.out.println("\n8e. Menambahkan 'X' di index 1 ===");
+        System.out.println("\n8f. Menambahkan 'C' setelah 'B'");
+        list.insertAfter("B", new Node("C"));
+        list.print();
+
+        System.out.println("\n8e. Menambahkan 'X' di index 1");
         list.insertAt(1, new Node("X"));
         list.print();
 
