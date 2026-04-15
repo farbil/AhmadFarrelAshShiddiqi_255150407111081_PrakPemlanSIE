@@ -128,6 +128,23 @@ public class DoubleLinkedList {
         }
     }
 
+    // g. Menambah node sebelum node yang memiliki nilai data tertentu
+    void insertBefore(Object key, Node data) {
+        Node current = findNode(key);
+        if (current != null) {
+            if (current == head) {
+                addFirst(data);
+            } else {
+                data.next = current;
+                data.prev = current.prev;
+
+                current.prev.next = data;
+                current.prev = data;
+                size++;
+            }
+        }
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -165,6 +182,10 @@ public class DoubleLinkedList {
 
         System.out.println("\n8f. Menambahkan 'C' setelah 'B'");
         list.insertAfter("B", new Node("C"));
+        list.print();
+
+        System.out.println("\n8g. Menambahkan 'B' sebelum 'A'");
+        list.insertBefore("A", new Node("B"));
         list.print();
 
         System.out.println("\n8e. Menambahkan 'X' di index 1");
