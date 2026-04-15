@@ -45,7 +45,7 @@ public class DoubleLinkedList {
         Node nodeB = new Node("B");
         Node nodeC = new Node("C");
 
-        list.addFirst(nodeA);
+        list.addLast(nodeA);
         System.out.println("head: " + list.head.data);
         System.out.println("tail: " + list.tail.data);
 
@@ -58,6 +58,9 @@ public class DoubleLinkedList {
         System.out.println("tail: " + list.tail.data);
 
         list.print();
+
+        System.out.println("Next of B: " + nodeB.next.data);
+        System.out.println("Prev of B: " + nodeB.prev.data);
     }
 
 }
