@@ -37,4 +37,27 @@ public class DoubleLinkedList {
             current = current.next;
         }
     }
+
+    public static void main(String[] args) {
+        DoubleLinkedList list = new DoubleLinkedList();
+
+        Node nodeA = new Node("A");
+        Node nodeB = new Node("B");
+        Node nodeC = new Node("C");
+
+        list.addFirst(nodeA);
+        System.out.println("head: " + list.head.data);
+        System.out.println("tail: " + list.tail.data);
+
+        list.addLast(nodeB);
+        System.out.println("head: " + list.head.data);
+        System.out.println("tail: " + list.tail.data);
+
+        list.addLast(nodeC);
+        System.out.println("head: " + list.head.data);
+        System.out.println("tail: " + list.tail.data);
+
+        list.print();
+    }
+
 }
