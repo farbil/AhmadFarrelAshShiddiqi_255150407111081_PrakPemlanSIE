@@ -29,6 +29,16 @@ public class SingleLinkedList {
         size++;
     }
 
+    // a. Mencari node dengan nilai tertentu
+    Node findNode(Object data) {
+        Node current = head;
+        while (current != null) {
+            if (current.data.equals(data)) return current;
+            current = current.next;
+        }
+        return null;
+    }
+
     static void cetakList(SingleLinkedList list) {
         Node current = list.head;
         while(current != null) {
@@ -45,6 +55,10 @@ public class SingleLinkedList {
         list.addLast(new Node("B"));
         list.addLast(new Node("D"));
         cetakList(list);
+
+        System.out.println("\na. Mencari node 'C'");
+        Node found = list.findNode("C");
+        System.out.println("Hasil pencarian data: " + (found != null ? found.data : null));
 
     }
 
