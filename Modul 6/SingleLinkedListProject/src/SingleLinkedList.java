@@ -176,9 +176,9 @@ public class SingleLinkedList {
         Node found = list.findNode("C");
         System.out.println("Hasil pencarian data: " + (found != null ? found.data : null));
 
-        System.out.println("b. Mencari node di index 2");
-        Node foundIndex = list.findNodeByIndex(2);
-        System.out.println("Hasil pencarian index 2: " + (foundIndex != null ? foundIndex.data : null));
+        System.out.println("b. Mencari node di index 3");
+        Node foundIndex = list.findNodeByIndex(3);
+        System.out.println("Hasil pencarian index 3: " + (foundIndex != null ? foundIndex.data : null));
 
     }
 
