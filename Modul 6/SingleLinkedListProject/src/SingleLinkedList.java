@@ -116,6 +116,25 @@ public class SingleLinkedList {
         }
     }
 
+    // g. Menambah node sebelum node dengan nilai data tertentu
+    void insertBefore(Object key, Node data) {
+        if (isEmpty()) return;
+        if (head.data.equals(key)) {
+            addFirst(data);
+            return;
+        }
+        Node current = head;
+        while (current.next != null) {
+            if (current.next.data.equals(key)) {
+                data.next = current.next;
+                current.next = data;
+                size++;
+                return;
+            }
+            current = current.next;
+        }
+    }
+
     static void cetakList(SingleLinkedList list) {
         Node current = list.head;
         while(current != null) {
@@ -135,6 +154,10 @@ public class SingleLinkedList {
 
         System.out.println("f. Menambah node 'C' setelah 'B'");
         list.insertAfter("B", new Node("C"));
+        cetakList(list);
+
+        System.out.println("g. Menambah node 'Start' sebelum 'A'");
+        list.insertBefore("A", new Node("Start"));
         cetakList(list);
 
         System.out.println("e. Menambah node 'X' di index 2");
