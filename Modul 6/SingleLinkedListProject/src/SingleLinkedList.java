@@ -87,6 +87,24 @@ public class SingleLinkedList {
         }
     }
 
+    // e. Menambah node di posisi (index) ke-n
+    void insertAt(int index, Node data) {
+        if (index < 0 || index > size) return;
+        if (index == 0) {
+            addFirst(data);
+        } else if (index == size) {
+            addLast(data);
+        } else {
+            Node prev = head;
+            for (int i = 0; i < index - 1; i++) {
+                prev = prev.next;
+            }
+            data.next = prev.next;
+            prev.next = data;
+            size++;
+        }
+    }
+
     static void cetakList(SingleLinkedList list) {
         Node current = list.head;
         while(current != null) {
@@ -102,6 +120,10 @@ public class SingleLinkedList {
         list.addLast(new Node("A"));
         list.addLast(new Node("B"));
         list.addLast(new Node("D"));
+        cetakList(list);
+
+        System.out.println("e. Menambah node 'X' di index 2");
+        list.insertAt(2, new Node("X"));
         cetakList(list);
 
         System.out.println("d. Menghapus node dengan data 'X'");
