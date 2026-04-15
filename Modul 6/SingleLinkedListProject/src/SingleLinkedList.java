@@ -49,6 +49,23 @@ public class SingleLinkedList {
         return current;
     }
 
+    // c. Menghapus node di posisi (index) ke-n
+    void removeByIndex(int index) {
+        if (index < 0 || index >= size || isEmpty()) return;
+        if (index == 0) {
+            head = head.next;
+            if (head == null) tail = null;
+        } else {
+            Node prev = head;
+            for (int i = 0; i < index - 1; i++) {
+                prev = prev.next;
+            }
+            prev.next = prev.next.next;
+            if (prev.next == null) tail = prev;
+        }
+        size--;
+    }
+
     static void cetakList(SingleLinkedList list) {
         Node current = list.head;
         while(current != null) {
@@ -73,6 +90,10 @@ public class SingleLinkedList {
         System.out.println("b. Mencari node di index 2");
         Node foundIndex = list.findNodeByIndex(2);
         System.out.println("Hasil pencarian index 2: " + (foundIndex != null ? foundIndex.data : null));
+
+        System.out.println("c. Menghapus node di index 0");
+        list.removeByIndex(0);
+        cetakList(list);
 
     }
 
