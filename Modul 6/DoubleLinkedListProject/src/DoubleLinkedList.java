@@ -78,6 +78,25 @@ public class DoubleLinkedList {
         size--;
     }
 
+    // 8d. Menghapus node dengan nilai data tertentu
+    void removeByData(Object data) {
+        Node target = findNode(data);
+        if (target == null) return;
+
+        if (target == head) {
+            head = head.next;
+            if (head != null) head.prev = null;
+            else tail = null;
+        } else if (target == tail) {
+            tail = tail.prev;
+            tail.next = null;
+        } else {
+            target.prev.next = target.next;
+            target.next.prev = target.prev;
+        }
+        size--;
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -115,6 +134,10 @@ public class DoubleLinkedList {
 
         System.out.println("\n8c. Menghapus index 1");
         list.removeByIndex(1);
+        list.print();
+
+        System.out.println("\n8d. Menghapus data 'A'");
+        list.removeByData("A");
         list.print();
 
         System.out.println("\n8a & 8b. Hasil");
