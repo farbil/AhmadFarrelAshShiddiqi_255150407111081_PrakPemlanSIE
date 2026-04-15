@@ -40,6 +40,26 @@ public class DoubleLinkedList {
         System.out.println("null");
     }
 
+    // 8a. Mencari node dengan nilai tertentu
+    Node findNode(Object data) {
+        Node current = head;
+        while (current != null) {
+            if (current.data.equals(data)) return current;
+            current = current.next;
+        }
+        return null;
+    }
+
+    // 8b. Mencari node di posisi ke-n
+    Node findNodeByIndex(int index) {
+        if (index < 0 || index >= size) return null;
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current;
+    }
+
     void print() {
         Node current = head;
         while (current != null) {
@@ -74,6 +94,11 @@ public class DoubleLinkedList {
 
         System.out.println("\n7. Menampilkan urutan elemen dari belakang");
         list.printFromBack();
+
+        System.out.println("\n8a & 8b. Hasil");
+        System.out.println("Cari 'C': " + (list.findNode("C") != null ? "Ditemukan" : "Tidak"));
+        System.out.println("Cari index 0: " + (list.findNodeByIndex(0) != null ? list.findNodeByIndex(0).data : "Tidak"));
+
     }
 
 }
