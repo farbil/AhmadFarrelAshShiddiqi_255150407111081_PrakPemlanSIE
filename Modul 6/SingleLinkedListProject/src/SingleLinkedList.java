@@ -32,21 +32,10 @@ public class SingleLinkedList {
     public static void main(String[] args) {
 
         SingleLinkedList list = new SingleLinkedList();
+        list.addLast(new Node("A"));
+        list.addLast(new Node("B"));
+        list.addLast(new Node("D"));
 
-        System.out.println("Head: " + list.head);
-        System.out.println("Tail: " + list.tail);
-
-        list.addFirst(new Node("A"));
-        System.out.println("Head: " + list.head.data);
-        System.out.println("Tail: " + list.tail.data);
-
-        list.addFirst(new Node("B"));
-        System.out.println("Head: " + list.head.data);
-        System.out.println("Tail: " + list.tail.data);
-
-        list.addLast(new Node("C"));
-        System.out.println("Head: " + list.head.data);
-        System.out.println("Tail: " + list.tail.data);
     }
 
 }
