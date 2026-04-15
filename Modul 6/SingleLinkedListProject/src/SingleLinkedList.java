@@ -1,5 +1,8 @@
 public class SingleLinkedList {
 
+    Node head, tail;
+    int size = 0;
+
     public static void main(String[] args) {
 
         SingleLinkedList list = new SingleLinkedList();
@@ -19,9 +22,6 @@ public class SingleLinkedList {
         System.out.println("Head: " + list.head.data);
         System.out.println("Tail: " + list.tail.data);
     }
-
-    Node head, tail;
-    int size = 0;
 
     void init() { head = null; }
     boolean isEmpty() { return size == 0; }
