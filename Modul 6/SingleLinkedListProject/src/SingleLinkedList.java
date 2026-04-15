@@ -104,14 +104,6 @@ public class SingleLinkedList {
         list.addLast(new Node("D"));
         cetakList(list);
 
-        System.out.println("a. Mencari node 'C'");
-        Node found = list.findNode("C");
-        System.out.println("Hasil pencarian data: " + (found != null ? found.data : null));
-
-        System.out.println("b. Mencari node di index 2");
-        Node foundIndex = list.findNodeByIndex(2);
-        System.out.println("Hasil pencarian index 2: " + (foundIndex != null ? foundIndex.data : null));
-
         System.out.println("d. Menghapus node dengan data 'X'");
         list.removeByData("X");
         cetakList(list);
@@ -119,6 +111,14 @@ public class SingleLinkedList {
         System.out.println("c. Menghapus node di index 0");
         list.removeByIndex(0);
         cetakList(list);
+
+        System.out.println("a. Mencari node 'C'");
+        Node found = list.findNode("C");
+        System.out.println("Hasil pencarian data: " + (found != null ? found.data : null));
+
+        System.out.println("b. Mencari node di index 2");
+        Node foundIndex = list.findNodeByIndex(2);
+        System.out.println("Hasil pencarian index 2: " + (foundIndex != null ? foundIndex.data : null));
 
     }
 
