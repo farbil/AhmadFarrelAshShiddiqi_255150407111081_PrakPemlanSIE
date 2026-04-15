@@ -105,6 +105,17 @@ public class SingleLinkedList {
         }
     }
 
+    // f. Menambah node setelah node dengan nilai data tertentu
+    void insertAfter(Object key, Node data) {
+        Node current = findNode(key);
+        if (current != null) {
+            data.next = current.next;
+            current.next = data;
+            if (current == tail) tail = data;
+            size++;
+        }
+    }
+
     static void cetakList(SingleLinkedList list) {
         Node current = list.head;
         while(current != null) {
@@ -120,6 +131,10 @@ public class SingleLinkedList {
         list.addLast(new Node("A"));
         list.addLast(new Node("B"));
         list.addLast(new Node("D"));
+        cetakList(list);
+
+        System.out.println("f. Menambah node 'C' setelah 'B'");
+        list.insertAfter("B", new Node("C"));
         cetakList(list);
 
         System.out.println("e. Menambah node 'X' di index 2");
