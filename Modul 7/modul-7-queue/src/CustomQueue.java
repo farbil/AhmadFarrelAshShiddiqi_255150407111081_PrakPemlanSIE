@@ -34,15 +34,21 @@ public class CustomQueue {
         System.out.println();
     }
 
+    public int peek() {
+        if (head == null) {
+            throw new RuntimeException("Queue is empty.");
+        }
+        return head.data;
+    }
+
     public static void main(String[] args) {
         CustomQueue queue = new CustomQueue();
         queue.enqueue(5);
-        queue.dequeue();
         queue.enqueue(15);
         queue.enqueue(25);
         queue.print();
-        queue.enqueue(35);
-        queue.enqueue(45);
+        System.out.println("Elemen terdepan: " + queue.peek());
+        queue.print();
         System.out.print("Custom Queue: ");
         while (!queue.isEmpty()) {
             System.out.print(queue.dequeue() + " ");
