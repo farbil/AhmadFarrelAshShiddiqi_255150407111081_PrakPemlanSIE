@@ -24,12 +24,23 @@ public class CustomQueue {
         return head == null;
     }
 
+    public void print() {
+        Node current = head;
+        System.out.print("Queue Saat Ini: ");
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         CustomQueue queue = new CustomQueue();
         queue.enqueue(5);
         queue.dequeue();
         queue.enqueue(15);
         queue.enqueue(25);
+        queue.print();
         queue.enqueue(35);
         queue.enqueue(45);
         System.out.print("Custom Queue: ");
