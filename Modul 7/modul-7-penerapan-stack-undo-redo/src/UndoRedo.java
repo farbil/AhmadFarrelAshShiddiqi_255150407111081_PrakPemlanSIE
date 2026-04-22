@@ -13,15 +13,21 @@ public class UndoRedo {
     public void undo() {
         if (undoStack.isEmpty())
             System.out.println("Nothing to undo.");
-        else {}
-        UndoRedo.print(undoStack);
+        else {
+            String cmd = undoStack.pop();
+            redoStack.push(cmd);
+        }
+        UndoRedo.print(undoStack, redoStack);
     }
 
     public void redo() {
-        if (redoStack.isEmpty())
+        if (redoStack.isEmpty()) {
             System.out.println("Nothing to redo.");
-        else {}
-        UndoRedo.print(undoStack);
+        } else {
+            String cmd = redoStack.pop();
+            undoStack.push(cmd);
+        }
+        UndoRedo.print(undoStack, redoStack);
     }
 
     public static void print(Stack<String> stack) {
@@ -49,7 +55,7 @@ public class UndoRedo {
             else if (command.equalsIgnoreCase("r")) { app.redo(); }
             else app.action(command);
         }
-        
+
         scanner.close();
         System.out.println("Program selesai.");
     }
