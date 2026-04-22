@@ -30,4 +30,27 @@ public class UndoRedo {
             System.out.print(s + " ");
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        UndoRedo app = new UndoRedo();
+        Scanner scanner = new Scanner(System.in);
+        String command;
+
+        while (true) {
+            System.out.println("---------------------------------");
+            System.out.println("Ketikkan teks sebagai command.");
+            System.out.println("Ketik U untuk melakukan Undo");
+            System.out.println("Ketik R untuk melakukan Redo");
+            System.out.println("Ketik X untuk mengakhiri program.");
+            System.out.print("Command: ");
+            command = scanner.nextLine();
+            if (command.equalsIgnoreCase("x")) break;
+            if (command.equalsIgnoreCase("u")) { app.undo(); }
+            else if (command.equalsIgnoreCase("r")) { app.redo(); }
+            else app.action(command);
+        }
+        
+        scanner.close();
+        System.out.println("Program selesai.");
+    }
 }
