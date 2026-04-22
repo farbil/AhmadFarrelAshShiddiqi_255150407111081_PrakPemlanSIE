@@ -1,3 +1,7 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
 public class Antrian {
 
     public static void main(String[] args) {
@@ -16,14 +20,15 @@ public class Antrian {
                 switch (choice) {
                     case 1:
                         System.out.print("Masukan Nama Pelanggan: ");
-                        // ..
+                        String name = sc.nextLine();
+                        queue.offer(name);
                         System.out.println(name + " ditambahkan ke antrian.");
                         break;
                     case 2:
                         if (queue.isEmpty())
                             System.out.println("Antrian kosong.");
                         else {
-                            //..
+                            String nama = queue.poll();
                             System.out.println("Melayani pelanggan : " + nama);
                         }
                         break;
