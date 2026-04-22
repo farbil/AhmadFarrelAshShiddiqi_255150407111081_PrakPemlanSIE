@@ -27,8 +27,11 @@ public class CustomQueue {
     public static void main(String[] args) {
         CustomQueue queue = new CustomQueue();
         queue.enqueue(5);
+        queue.dequeue();
         queue.enqueue(15);
         queue.enqueue(25);
+        queue.enqueue(35);
+        queue.enqueue(45);
         System.out.print("Custom Queue: ");
         while (!queue.isEmpty()) {
             System.out.print(queue.dequeue() + " ");
