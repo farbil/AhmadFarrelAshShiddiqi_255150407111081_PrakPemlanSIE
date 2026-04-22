@@ -20,5 +20,20 @@ public class CustomQueue {
         size--;
         return val;
     }
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public static void main(String[] args) {
+        CustomQueue queue = new CustomQueue();
+        queue.enqueue(5);
+        queue.enqueue(15);
+        queue.enqueue(25);
+        System.out.print("Custom Queue: ");
+        while (!queue.isEmpty()) {
+            System.out.print(queue.dequeue() + " ");
+        }
+        System.out.println();
+    }
 
 }
