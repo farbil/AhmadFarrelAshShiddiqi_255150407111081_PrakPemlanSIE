@@ -34,13 +34,11 @@ public class CustomStack {
         CustomStack custom = new CustomStack();
         custom.push(1);
         custom.push(2);
-        System.out.println("Top saat ini (peek): " + custom.peek());
         custom.push(3);
         System.out.print("Custom Stack: ");
         while (!custom.isEmpty()) {
             System.out.print("[" + custom.pop() + "]");
         }
         System.out.println("End.");
-        System.out.println(custom.pop());
     }
 }
