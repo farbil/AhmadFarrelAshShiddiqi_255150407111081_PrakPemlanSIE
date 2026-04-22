@@ -41,5 +41,6 @@ public class CustomStack {
             System.out.print("[" + custom.pop() + "]");
         }
         System.out.println("End.");
+        System.out.println(custom.pop());
     }
 }
