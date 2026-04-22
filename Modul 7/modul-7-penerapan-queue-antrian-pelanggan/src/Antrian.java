@@ -33,7 +33,12 @@ public class Antrian {
                         }
                         break;
                     case 3:
-                        System.out.println("Antrian Saat Ini: " + queue);
+                        if (queue.isEmpty()) {
+                            System.out.println("Tidak ada antrian");
+                        } else {
+                            System.out.println("Antrian Terdepan: " + queue.peek());
+                            System.out.println("Antrian Saat Ini: " + queue);
+                        }
                         break;
                     case 4:
                         System.out.println("Keluar.");
