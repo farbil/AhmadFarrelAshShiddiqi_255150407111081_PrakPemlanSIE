@@ -31,13 +31,31 @@ public class CustomStack {
     }
 
     public static void main(String[] args) {
-        CustomStack custom = new CustomStack();
-        custom.push(1);
-        custom.push(2);
-        custom.push(3);
-        System.out.print("Custom Stack: ");
-        while (!custom.isEmpty()) {
-            System.out.print("[" + custom.pop() + "]");
+        CustomStack stack = new CustomStack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+
+        CustomStack stackSementara = new CustomStack();
+        while (!stack.isEmpty()) {
+            stackSementara.push(stack.pop());
+        }
+
+        stack.push(stackSementara.pop());
+        stack.push(5);
+        stack.push(stackSementara.pop());
+        stack.push(stackSementara.pop());
+        stack.push(stackSementara.pop());
+
+        CustomStack cetakStack = new CustomStack();
+        while (!stack.isEmpty()) {
+            cetakStack.push(stack.pop());
+        }
+
+        System.out.print("Custom Stack Target: ");
+        while (!cetakStack.isEmpty()) {
+            System.out.print("[" + cetakStack.pop() + "]");
         }
         System.out.println("End.");
     }
