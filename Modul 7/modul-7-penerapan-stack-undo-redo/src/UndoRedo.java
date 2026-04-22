@@ -10,7 +10,7 @@ public class UndoRedo {
         System.out.println("Action: " + command);
         undoStack.push(command);
         redoStack.clear();
-        UndoRedo.print(undoStack);
+        UndoRedo.print(undoStack, redoStack);
     }
 
     public void undo() {
@@ -20,7 +20,7 @@ public class UndoRedo {
             String cmd = undoStack.pop();
             redoStack.push(cmd);
         }
-        UndoRedo.print(undoStack, );
+        UndoRedo.print(undoStack, redoStack);
     }
 
     public void redo() {
@@ -30,14 +30,17 @@ public class UndoRedo {
             String cmd = redoStack.pop();
             undoStack.push(cmd);
         }
-        UndoRedo.print(undoStack);
+        UndoRedo.print(undoStack, redoStack);
     }
 
-    public static void print(Stack<String> stack) {
+    public static void print(Stack<String> undoStack, Stack<String> redoStack) {
         System.out.print("Stack Undo: ");
-        for(String s: stack)
-            System.out.print(s + " ");
+        for (String s : undoStack) System.out.print(s + " ");
         System.out.println();
+
+        System.out.print("Stack Redo: ");
+        for (String s : redoStack) System.out.print(s + " ");
+        System.out.println("\n----------------");
     }
 
     public static void main(String[] args) {
