@@ -1,0 +1,24 @@
+public class CustomQueue {
+
+    private Node head, tail;
+    private int size = 0;
+
+    public void enqueue(int x) {
+        Node n = new Node(x);
+        if (tail != null) tail.next = n;
+        tail = n;
+        if (head == null) head = tail;
+        size++;
+    }
+
+    public int dequeue() {
+        if (head == null)
+            throw new RuntimeException("Queue is empty.");
+        int val = head.data;
+        head = head.next;
+        if (head == null) tail = null;
+        size--;
+        return val;
+    }
+
+}
