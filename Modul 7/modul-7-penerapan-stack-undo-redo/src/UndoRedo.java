@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Stack;
+
 public class UndoRedo {
 
     Stack<String> undoStack = new Stack<>();
@@ -17,7 +20,7 @@ public class UndoRedo {
             String cmd = undoStack.pop();
             redoStack.push(cmd);
         }
-        UndoRedo.print(undoStack, redoStack);
+        UndoRedo.print(undoStack, );
     }
 
     public void redo() {
@@ -27,7 +30,7 @@ public class UndoRedo {
             String cmd = redoStack.pop();
             undoStack.push(cmd);
         }
-        UndoRedo.print(undoStack, redoStack);
+        UndoRedo.print(undoStack);
     }
 
     public static void print(Stack<String> stack) {
