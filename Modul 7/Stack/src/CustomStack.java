@@ -22,4 +22,16 @@ public class CustomStack {
     public boolean isEmpty() {
         return top == null;
     }
+
+    public static void main(String[] args) {
+        CustomStack custom = new CustomStack();
+        custom.push(1);
+        custom.push(2);
+        custom.push(3);
+        System.out.print("Custom Stack: ");
+        while (!custom.isEmpty()) {
+            System.out.print("[" + custom.pop() + "]");
+        }
+        System.out.println("End.");
+    }
 }
