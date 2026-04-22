@@ -21,8 +21,13 @@ public class Antrian {
                     case 1:
                         System.out.print("Masukan Nama Pelanggan: ");
                         String name = sc.nextLine();
-                        queue.offer(name);
-                        System.out.println(name + " ditambahkan ke antrian.");
+                        if (name.equalsIgnoreCase("Budi")) {
+                            ((LinkedList<String>) queue).addFirst(name);
+                            System.out.println(name + " ditambahkan ke antrian paling depan.");
+                        } else{
+                            queue.offer(name);
+                            System.out.println(name + " ditambahkan ke antrian.");
+                        }
                         break;
                     case 2:
                         if (queue.isEmpty())
