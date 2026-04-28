@@ -31,4 +31,8 @@ public class BinaryTree {
         System.out.printf("[%d]", node.data);
     }
 
+    public static void main(String[] args) {
+
+    }
+
 }
