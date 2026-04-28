@@ -32,7 +32,12 @@ public class BinaryTree {
     }
 
     public static void main(String[] args) {
-
+        BinaryTree tree = new BinaryTree();
+        for (int i = 0; i < 10; i++) {
+            int nilai = (int) (Math.random() * 100);
+            System.out.printf("Nilai %d dimasukkan.\n", nilai);
+            tree.add(nilai);
+        }
     }
 
 }
