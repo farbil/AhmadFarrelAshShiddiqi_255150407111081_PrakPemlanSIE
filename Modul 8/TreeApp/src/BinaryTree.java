@@ -31,6 +31,13 @@ public class BinaryTree {
         System.out.printf("[%d]", node.data);
     }
 
+    public int countNodes(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        return 1 + countNodes(node.left) + countNodes(node.right);
+    }
+
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         for (int i = 0; i < 10; i++) {
@@ -46,6 +53,7 @@ public class BinaryTree {
         System.out.print("\nPostOrder : ");
         tree.postTraverse(tree.root);
         System.out.println();
+        System.out.println("Total Node: " + tree.countNodes(tree.root));
     }
 
 }
