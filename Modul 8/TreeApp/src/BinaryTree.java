@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
 
     Node root;
@@ -56,6 +59,25 @@ public class BinaryTree {
         return Math.max(leftHeight, rightHeight) + 1;
     }
 
+    public void levelTraverse(Node node) {
+        if (node == null) return;
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
+            System.out.printf("[%d]", current.data);
+
+            if (current.left != null) {
+                queue.add(current.left);
+            }
+            if (current.right != null) {
+                queue.add(current.right);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
 
@@ -71,6 +93,8 @@ public class BinaryTree {
         tree.inTraverse(tree.root);
         System.out.print("\nPostOrder : ");
         tree.postTraverse(tree.root);
+        System.out.print("\nLeverOrder: ");
+        tree.levelTraverse(tree.root);
         System.out.println();
         System.out.println("Total Node: " + tree.countNodes(tree.root));
         System.out.println("Total Daun: " + tree.countLeaves(tree.root));
