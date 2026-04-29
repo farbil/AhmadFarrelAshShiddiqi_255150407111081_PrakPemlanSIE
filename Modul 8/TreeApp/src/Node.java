@@ -1,18 +1,18 @@
 public class Node {
-    int data;
+    String data;
     Node left, right;
 
-    Node(int data) {
+    Node(String data) {
         this.data = data;
     }
 
-    public void add(int data) {
-        if (data > this.data) {
+    public void add(String data) {
+        if (data.compareTo(this.data) > 0) {
             if (this.right == null) {
                 this.right = new Node(data);
             } else this.right.add(data);
         }
-        if (data < this.data) {
+        if (data.compareTo(this.data) < 0) {
             if (this.left == null) {
                 this.left = new Node(data);
             } else this.left.add(data);

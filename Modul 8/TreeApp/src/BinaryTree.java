@@ -2,7 +2,7 @@ public class BinaryTree {
 
     Node root;
 
-    public void add(int data) {
+    public void add(String data) {
         if (root == null) {
             root = new Node(data);
             return;
@@ -12,7 +12,7 @@ public class BinaryTree {
 
     public void preTraverse(Node node) {
         if (node == null) return;
-        System.out.printf("[%d]", node.data);
+        System.out.printf("[%s]", node.data);
         preTraverse(node.left);
         preTraverse(node.right);
     }
@@ -20,7 +20,7 @@ public class BinaryTree {
     public void inTraverse(Node node) {
         if (node == null) return;
         inTraverse(node.left);
-        System.out.printf("[%d]", node.data);
+        System.out.printf("[%s]", node.data);
         inTraverse(node.right);
     }
 
@@ -28,7 +28,7 @@ public class BinaryTree {
         if (node == null) return;
         postTraverse(node.left);
         postTraverse(node.right);
-        System.out.printf("[%d]", node.data);
+        System.out.printf("[%s]", node.data);
     }
 
     public int countNodes(Node node) {
@@ -58,10 +58,12 @@ public class BinaryTree {
 
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
-        for (int i = 0; i < 10; i++) {
-            int nilai = (int) (Math.random() * 100);
-            System.out.printf("Nilai %d dimasukkan.\n", nilai);
-            tree.add(nilai);
+
+        String[] dataHuruf = {"M", "E", "S", "A", "G", "Q", "Z", "C", "K", "O"};
+
+        for (int i = 0; i < dataHuruf.length; i++) {
+            System.out.printf("Nilai %s dimasukkan.\n", dataHuruf[i]);
+            tree.add(dataHuruf[i]);
         }
         System.out.println();
         System.out.print("PreOrder  : ");
