@@ -38,6 +38,14 @@ public class BinaryTree {
             System.out.printf("Nilai %d dimasukkan.\n", nilai);
             tree.add(nilai);
         }
+        System.out.println();
+        System.out.print("PreOrder  : ");
+        tree.preTraverse(tree.root);
+        System.out.print("\nInOrder   : ");
+        tree.inTraverse(tree.root);
+        System.out.print("\nPostOrder : ");
+        tree.postTraverse(tree.root);
+        System.out.println();
     }
 
 }
