@@ -47,6 +47,15 @@ public class BinaryTree {
         return countLeaves(node.left) + countLeaves(node.right);
     }
 
+    public int hitungTinggiTree(Node node) {
+        if (node == null) return 0;
+
+        int leftHeight = hitungTinggiTree(node.left);
+        int rightHeight = hitungTinggiTree(node.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         for (int i = 0; i < 10; i++) {
@@ -64,6 +73,7 @@ public class BinaryTree {
         System.out.println();
         System.out.println("Total Node: " + tree.countNodes(tree.root));
         System.out.println("Total Daun: " + tree.countLeaves(tree.root));
+        System.out.println("Tinggi Tree: " + tree.hitungTinggiTree(tree.root));
     }
 
 }
