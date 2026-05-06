@@ -6,7 +6,7 @@ public class Sort {
         for (int i = 0; i < list.length - 1; i++) {
             for (int k = i + 1; k < list.length; k++) {
                 System.out.printf("%d:%d\n", list[k], list[i]);
-                if (list[k] < list[i]) {
+                if (list[k] > list[i]) {
                     int t = list[i];
                     list[i] = list[k];
                     list[k] = t;
@@ -25,7 +25,7 @@ public class Sort {
              * Move elements of arr[0..i-1], that are greater than key,
              * to one position ahead of their current position
              */
-            while (k >= 0 && list[k] > key) {
+            while (k >= 0 && list[k] < key) {
                 list[k + 1] = list[k];
                 k = k - 1;
             }
@@ -40,7 +40,7 @@ public class Sort {
             // Find the minimum element in unsorted array
             int minIndex = i;
             for (int k = i + 1; k < list.length; k++) {
-                if (list[k] < list[minIndex])
+                if (list[k] > list[minIndex])
                     minIndex = k;
             }
             // Swap the found minimum element
