@@ -8,7 +8,7 @@ public class Search {
     }
     public static int binarySearch(int[] arr, int search ) {
         int low = 0, high = arr.length - 1;
-        while (low < high) {
+        while (low <= high) {
             int mid = low + (high - low) / 2;
             if (arr[mid] == search) return mid;
             if (arr[mid] < search) low = mid + 1;
@@ -18,5 +18,8 @@ public class Search {
     }
     public static void main(String[] args) {
         int[] arrayTerurutAscending = {2, 5, 8, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 55, 58, 62, 65, 68, 72, 75, 78, 81, 85, 88, 92, 95};
+
+        int indeksLinear = linearSearch(arrayTerurutAscending, 88);
+        System.out.println("Nilai indeks dari Linear Search: " + indeksLinear);
     }
 }
