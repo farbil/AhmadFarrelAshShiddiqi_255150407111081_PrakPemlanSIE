@@ -17,5 +17,6 @@ public class Search {
         return -1;
     }
     public static void main(String[] args) {
+        int[] arrayTerurutAscending = {2, 5, 8, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 55, 58, 62, 65, 68, 72, 75, 78, 81, 85, 88, 92, 95};
     }
 }
