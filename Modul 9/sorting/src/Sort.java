@@ -56,9 +56,14 @@ public class Sort {
         // ubah nilai default Array ini menjadi sebanyak 30 elemen
         // acak/tidak terurut dan nilai elemennya tidak ada yang ganda.
         int[] data = {45, 12, 89, 3, 76, 21, 58, 91, 14, 67, 34, 8, 50, 29, 95, 7, 62, 84, 19, 41, 73, 2, 55, 38, 99, 16, 48, 81, 26, 60};
+
+        System.out.println("Array sebelum diurutkan:");
+        System.out.println(Arrays.toString(data));
+
         int[] sorted = bubble(data);
         // int[] sorted = insertion(data);
         // int[] sorted = selection(data);
+        System.out.println("Array setelah diurutkan:");
         System.out.println(Arrays.toString(sorted));
     }
 }
