@@ -55,7 +55,7 @@ public class Sort {
     public static void main(String[] args) {
         // ubah nilai default Array ini menjadi sebanyak 30 elemen
         // acak/tidak terurut dan nilai elemennya tidak ada yang ganda.
-        int[] data = { 10, 5, 15, 8, 3 };
+        int[] data = {45, 12, 89, 3, 76, 21, 58, 91, 14, 67, 34, 8, 50, 29, 95, 7, 62, 84, 19, 41, 73, 2, 55, 38, 99, 16, 48, 81, 26, 60};
         int[] sorted = bubble(data);
         // int[] sorted = insertion(data);
         // int[] sorted = selection(data);
